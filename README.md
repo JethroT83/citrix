@@ -1,10 +1,13 @@
 Citrix API - PHP wrapper around GoToWebinar APIs - 2015
 ======
 
+This is a forked project from teodortalov/citrix.  In practice, teodortalov's project was good, but was missing a few things.
+
+
 Install via Composer
 --
 
-`require "teodortalov/citrix: *"`
+`require "jlynch/citrix: *"`
 
 Authenticate and Get Going in 15 seconds
 --
