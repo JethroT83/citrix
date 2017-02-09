@@ -14,21 +14,26 @@ This package is forked from teodortalov/citrix.  It it therefore not registered.
         "jedlynch/citrix": "1.3.4"
     },              
     "repositories": [{
+
         "type": "package",
+
         "package": {
             "name": "jedlynch/citrix",
             "version": "1.3.4",
             "type":"libaray",
-            "source": {
+            
+            "source": { 
                 "url": "https://github.com/JethroT83/citrix.git",
                 "type": "git",
                 "reference": "origin/master"
             },
+
             "autoload": {
                 "psr-0": {
                       "": "src/"
                 }
             }
+
         } 
     }],
 
