@@ -7,7 +7,30 @@ This is a forked project from teodortalov/citrix.  In practice, teodortalov's pr
 Install via Composer
 --
 
-`require "teodortalov/citrix: *"`
+This package is forked from teodortalov/citrix.  It it therefore not registered.  This will have to be required as a git repository.
+
+
+"require": {
+        "jedlynch/citrix": "1.3.4"
+    },              
+    "repositories": [{
+        "type": "package",
+        "package": {
+            "name": "jedlynch/citrix",
+            "version": "1.3.4",
+            "type":"libaray",
+            "source": {
+                "url": "https://github.com/JethroT83/citrix.git",
+                "type": "git",
+                "reference": "origin/master"
+            },
+            "autoload": {
+                "psr-0": {
+                      "": "src/"
+                }
+            }
+        } 
+    }],
 
 Authenticate and Get Going in 15 seconds
 --
