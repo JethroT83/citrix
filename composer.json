@@ -8,6 +8,16 @@
             "email": "jlynch@isminc.com"
         }
     ],
+    "autoload" : {
+        "psr-0" : {
+            "Citrix" : "src/"
+        }
+    },
     "minimum-stability": "stable",
+    "repositories" : [{
+        "type" : "vcs",
+        "url" : "https://github.com/JethroT83/citrix.git"
+        }
+    ],
     "require": {}
 }
