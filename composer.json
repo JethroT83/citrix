@@ -1,5 +1,6 @@
 {
-    "name": "jlynch/citrix",
+    "name": "teodortalov/citrix",
+    "version": "ism-dev",
     "description": "PHP wrapper around Citrix - GoToMeeting and GoToWebinar APIs. Forked from teodortalov/citrix.",
     "keywords": ["Citrix", "Citrix API", "GoToWebinar API", "GoToMeeting API", "GoToWebinar"],
     "license": "MIT",
@@ -7,10 +8,6 @@
         {
             "name": "Teodor Talov",
             "email": "teodor@talov.com"
-        },
-        {
-            "name": "Jed Lynch",
-            "email": "jedlynch@gmail.com"
         }
     ],
     "autoload" : {
@@ -21,7 +18,7 @@
     "minimum-stability": "stable",
     "repositories" : [{
         "type" : "vcs",
-        "url" : "https://github.com/JethroT83/citrix"
+        "url" : "https://github.com/teodortalov/citrix.git"
         }
     ],
     "require": {
