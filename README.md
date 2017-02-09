@@ -7,7 +7,7 @@ This is a forked project from teodortalov/citrix.  In practice, teodortalov's pr
 Install via Composer
 --
 
-`require "jlynch/citrix: *"`
+`require "teodortalov/citrix: *"`
 
 Authenticate and Get Going in 15 seconds
 --
