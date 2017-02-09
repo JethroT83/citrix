@@ -17,7 +17,7 @@
     "minimum-stability": "stable",
     "repositories" : [{
         "type" : "vcs",
-        "url" : "https://github.com/teodortalov/citrix.git"
+        "url" : "https://github.com/JethroT83/citrix.git"
         }
     ],
     "require": {
