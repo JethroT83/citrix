@@ -60,16 +60,28 @@ abstract class ServiceAbstract
     $url = $this->getUrl();
     $ch = curl_init(); // initiate curl
     
-    if ($this->getHttpMethod() == 'POST') {
-      curl_setopt($ch, CURLOPT_POST, true); // tell curl you want to post something
-      curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($this->getParams())); // define what you want to post
-    } else if($this->getHttpMethod() != 'POST' && $this->getHttpMethod() != 'GET') {
-      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $this->getHttpMethod());
-    } else {
-      $url = $this->getUrl();
-      $query = http_build_query($this->getParams());
-      $url = $url . '?' . $query;
+    switch($this->getHttpMethod()){
+
+      case "POST":
+        curl_setopt($ch, CURLOPT_POST, true); // tell curl you want to post something
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($this->getParams())); // define what you want to post
+        break;
+
+      case "PUT":
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($this->getParams()));
+        break;
+
+      case "DELETE":
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+        break;
+
+      default:
+        $url = $this->getUrl();
+        $query = http_build_query($this->getParams());
+        $url = $url . '?' . $query;
     }
+
     
     if (! is_null($oauthToken)) {
       $headers = array(
