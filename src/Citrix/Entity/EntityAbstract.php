@@ -20,7 +20,7 @@ abstract class EntityAbstract
    * just getters and setters that's all
    * @var Array
    */
-  protected $data;
+  public $data;
 
   /**
    *
